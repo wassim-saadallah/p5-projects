@@ -1,6 +1,8 @@
 {
   "name": "collection",
   "projects": [
-    "project"
+    "project",
+    "yesNo",
+    "gravity"
   ]
 }

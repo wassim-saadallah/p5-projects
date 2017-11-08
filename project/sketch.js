@@ -1,7 +1,7 @@
 let colors = [];
 let bubbles = [];
 let numBubbles = 5000;
-let k = 2;
+let k = 7;
 let nodes = [];
 let prev_nodes = [];
 let clusters = [];
@@ -29,6 +29,7 @@ function setup() {
 		clusters.push([]);
 	}
 
+	
 	//instanciate the clusters
 	for(let i = 0; i<numBubbles; i++){
 		let distances = nodes.map( n => dist(bubbles[i].pos.x,bubbles[i].pos.y,n.pos.x,n.pos.y));
