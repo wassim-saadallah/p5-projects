@@ -42,7 +42,7 @@ function mouseReleased() {
 	play = true;
 	initVel = createVector(mouseX-width/2, mouseY-height/2).sub(particle.pos).mult(-1);
 	console.log(initVel);
-	particle.vel = initVel.setMag(map(dist(mouseX, mouseY, particle.pos.x, particle.pos.y), 0, height, 0, 4));
+	particle.vel = initVel.setMag(map(dist(mouseX, mouseY, particle.pos.x, particle.pos.y), 0, height, 0, 2));
 	
 }
 
