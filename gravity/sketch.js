@@ -42,7 +42,7 @@ function mouseReleased() {
 	play = true;
 	initVel = createVector(mouseX-width/2, mouseY-height/2).sub(particle.pos).mult(-1);
 	console.log(initVel);
-	particle.vel = initVel.setMag(map(dist(mouseX, mouseY, particle.pos.x, particle.pos.y), 0, height, 0, 5));
+	particle.vel = initVel.setMag(map(dist(mouseX, mouseY, particle.pos.x, particle.pos.y), 0, height, 0, 4));
 	
 }
 
@@ -93,7 +93,7 @@ function draw() {
 		//max = Math.max(...gravityFields.map(x => dist(x.x, x.y, particle.pos.x, particle.pos.y)));
 		for (let i = 0; i < gravityFields.length; i++) {
 			let r = gravityFields[i];
-			particle.applyForce(r.copy().sub(particle.pos).setMag(map(dist(r.x, r.y, particle.pos.x, particle.pos.y), max, 0, 0, 0.01)));
+			particle.applyForce(r.copy().sub(particle.pos).setMag(map(dist(r.x, r.y, particle.pos.x, particle.pos.y), 1000, 0, 0, 0.1)));
 		}
 		particle.update();
 		particle.show();
